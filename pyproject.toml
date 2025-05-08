@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "macos-notification-mcp"
+version = "0.1.1"
+description = "macOS Notification MCP Server with sound, banner, and speech alerts"
+readme = "README.md"
+authors = [{name = "Phatchara Maichandi"}]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS"
+]
+dependencies = ["fastmcp>=1.0.0"]
+requires-python = ">=3.9"
+
+[project.scripts]
+macos-notification-mcp = "macos_notification_mcp.server:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["macos_notification_mcp"]
